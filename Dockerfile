@@ -19,7 +19,7 @@ COPY . /var/www/html/
 
 RUN mkdir /data && chown -R www-data /data && chmod 755 /data & chmod 755 -R /var/www/html/
 
-RUN a2enmod php7.3
+RUN apt-get install -y php7.3
 
 # Script to start the server
 CMD  ["./entrypoint.sh"]
