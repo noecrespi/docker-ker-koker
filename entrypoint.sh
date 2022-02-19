@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# get apache environment variables
-
+# Source apache variables for configuration
 . /etc/apache2/envvars
 
-echo "Entry point (entrypoint.sh)"
+echo "Entrypoint (entrypoint.sh)"
+ls -l
+ls -ldg /data
+ls -l /data/
 
-# show long dir structure
-ls -la
-# show complete list 
-ls -l /datos/
+# some shells will allow the user to click on the URL in the following lines
+echo && echo && echo "----> Point your browser at http://localhost:8086/public_html/" && echo && echo
 
-echo "----> Apunte su navegador a http://localhost:8086/public_html/"
-
- exec apache2 -D FIRST PLANE
+# Run apache not as daemon, just for testing
+exec apache2 -D FOREGROUND
