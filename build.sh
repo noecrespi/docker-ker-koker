@@ -3,4 +3,4 @@
 # Script to build a Docker container base in Docker file image
 
 echo "Building Docker container"
-docker build -t step2 .
+docker build -t primer-docker .
