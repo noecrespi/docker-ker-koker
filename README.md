@@ -17,7 +17,6 @@ A partir de un fichero **Dockerfile**, lanzaremos un contenedor donde de ejecuta
 
 2. Preparar el directorio donde copieramos los rchivos locales al contenedor.
 
-![](img/)
 ###### Directorio de los archivos locales del contenedor
 
 ### Contenido de `Dockerfile`:
@@ -75,8 +74,11 @@ A partir de un fichero **Dockerfile**, lanzaremos un contenedor donde de ejecuta
 
     ```CMD  ["./entrypoint.sh"]```
 
+![](images/dockerfile.png)
 
-3. Despúes de configurar el `Dockerfile`  hay que contruir el contenedor (`build.sh`). 
+###### dockerfile
+
+3. Despúes de configurar el `Dockerfile`  hay que construir el contenedor (`build.sh`). 
 
 ```
 #!/bin/sh
@@ -88,8 +90,10 @@ A partir de un fichero **Dockerfile**, lanzaremos un contenedor donde de ejecuta
 
 docker build -t chapter2 .
 ```
-![](img/)
-###### comando build.sh
+![](images/buildshexecute.png)
+###### buildshexecute
+![](images/buildshcode.png)
+###### buildshcode
 
 4. Lanzar el contenedor (`debug.sh`).
 
@@ -108,13 +112,23 @@ docker run \
     chapter2
 ```
 
-![](images/)
-###### comando debug.sh
+![](images/debugshexecute.png)
+###### debugshexecute
+![](images/debugshcode.png)
+###### debugshcode
+![](images/containerrunning.png)
+###### containerrunning
 
 5. Acceder al servidor PhP hosteado con el contenedor de Docker.
 
-![](images/)
-###### localhost
+![](images/counterdebug.png)
+###### counterdebug
+![](images/persistexecute.png)
+###### persistexecute
+![](images/persistestado.png)
+###### persistestado
+![](images/stopestado.png)
+###### stopestado
 
 
 ##  Bibliografía
